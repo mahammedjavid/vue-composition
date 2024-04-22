@@ -22,14 +22,19 @@
 
   <hr>
   <user-data :user="user"></user-data>
+<hr>
+<customer_comp></customer_comp>
 </template>
+
 <script>
 import { computed, provide, reactive, ref, watch ,onBeforeMount , onBeforeUpdate , onBeforeUnmount , onUpdated , onMounted , onUnmounted } from "vue"; //only for object
 import userDataVue from './userData.vue';
+import customerVue from './customer.vue';
 
 export default {
   components : {
-    "user-data" : userDataVue
+    "user-data" : userDataVue,
+    "customer_comp" : customerVue
   },
   setup() {
     const randomName = ref("Mahammed");
